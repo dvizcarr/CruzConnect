@@ -1,0 +1,22 @@
+body {
+    background-color: #001d3d;
+}
+
+p {
+    color: white;
+}
+
+.ta {
+    width: 250px;
+    height: 100px;
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+    border: 0;
+}
+
+fieldset {
+    width: 254px
+}
