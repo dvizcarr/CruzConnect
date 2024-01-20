@@ -1,2 +1,2 @@
-# SlugConnect
+# CruzConnect
 CruzHacks 2024
