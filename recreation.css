@@ -208,7 +208,7 @@ aside {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
-    background-image: url('UCSC_Campus-from-above.jpg');
+    background-image: url('landscapeshotucsc.jpg');
     /* Adjust the path to your image file */
     background-size: cover;
     background-position: center;
