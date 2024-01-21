@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rideshare - CruzConnect</title>
+    <link rel="stylesheet" href="rideshare.css">
+</head>
+<body>
+    <header>
+        <!-- Navigation Bar -->
+    </header>
+
+    <main>
+        <section id="create-post">
+            <h2>Create a Rideshare Post</h2>
+            <form id="newPostForm">
+                <!-- Input fields for the post details -->
+                <input type="text" name="destination" placeholder="Destination" required>
+                <input type="text" name="departure" placeholder="Departure Time" required>
+                <textarea name="additionalInfo" placeholder="Additional Information"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="posts-list">
+            <h2>Available Rideshares</h2>
+            <!-- This is where the posts will be injected -->
+            <article class="post">
+                <h3>Post Title (e.g., To San Francisco)</h3>
+                <p>Description or details about the rideshare.</p>
+                <button class="details-btn">View Details</button>
+            </article>
+            <!-- Repeat the above for each post -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+
+    <script>
+        // Here you will add JavaScript to handle form submission and post expansion.
+    </script>
+</body>
+</html>
