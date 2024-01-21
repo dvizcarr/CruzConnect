@@ -60,6 +60,12 @@ header img {
     border-radius: 3px;
 }
 
+.open-button:hover {
+    background-color: #003566;
+    border-color: #003566;
+    color: #ffc300;
+}
+
 .popup-container button {
     width: 100px;
     height: 25px;
@@ -100,11 +106,16 @@ header img {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 10px; /* Rounded corners for a 3D effect */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-    padding: 15px; /* Increase padding for spacing */
-    background-color: #fff; /* Background color */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 10px;
+    /* Rounded corners for a 3D effect */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    /* Add a shadow for depth */
+    padding: 15px;
+    /* Increase padding for spacing */
+    background-color: #fff;
+    /* Background color */
 }
 
 .post-content {
@@ -194,28 +205,36 @@ aside {
     background: none;
     border: none;
 }
+
 /* Style the posts grid */
 #post-grid {
-    margin-left: 220px; /* Adjust this value as necessary */
+    margin-left: 220px;
+    /* Adjust this value as necessary */
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
-    background-image: url('UCSC_Campus-from-above.jpg'); /* Adjust the path to your image file */
+    background-image: url('UCSC_Campus-from-above.jpg');
+    /* Adjust the path to your image file */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This will make sure the background image doesn't scroll with the page */
-    min-height: 100vh; /* Minimum height to ensure it covers the viewport */
+    background-attachment: fixed;
+    /* This will make sure the background image doesn't scroll with the page */
+    min-height: 100vh;
+    /* Minimum height to ensure it covers the viewport */
 }
 
 /* Style for individual posts */
 .post {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for readability */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent background for readability */
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
-    margin-bottom: 20px; /* Add space between posts */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 20px;
+    /* Add space between posts */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
 }
 
 /* ... additional existing styles ... */
@@ -224,12 +243,15 @@ aside {
 @media (max-width: 768px) {
     #filters {
         width: 100%;
-        position: relative; /* This will make the filters stack above the posts on smaller screens */
-        order: 1; /* Assuming you're using flexbox on a parent container */
+        position: relative;
+        /* This will make the filters stack above the posts on smaller screens */
+        order: 1;
+        /* Assuming you're using flexbox on a parent container */
     }
 
     #post-grid {
         margin-left: 0;
-        order: 2; /* This will ensure the posts grid comes after the filters */
+        order: 2;
+        /* This will ensure the posts grid comes after the filters */
     }
 }

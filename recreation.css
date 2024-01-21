@@ -69,6 +69,12 @@ header img {
     background-color: #000814;
 }
 
+.open-button:hover {
+    background-color: #003566;
+    border-color: #003566;
+    color: #ffc300;
+}
+
 /* Style the filters sidebar */
 #filters {
     background-color: #f0f0f0;
