@@ -19,7 +19,7 @@ const Note = mongoose.model('Note', notesSchema);
 
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + '/new_post.html');
+    res.sendFile(__dirname + '/rideshare_newpost.html');
 })
 
 app.post("/", function(req, res){
