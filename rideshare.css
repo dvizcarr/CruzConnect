@@ -1,0 +1,81 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a default font and line height */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* Style the header section */
+  header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the navigation bar (if needed) */
+  /* You can add more styles for the navigation bar here */
+  
+  /* Style the Create a Rideshare Post section */
+  #create-post {
+    padding: 20px;
+  }
+  
+  #newPostForm {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"] {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /* Style the Available Rideshares section */
+  #posts-list {
+    padding: 20px;
+  }
+  
+  .post {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .post h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+  }
+  
+  .details-btn {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /* Style the footer (if needed) */
+  /* You can add more styles for the footer here */
+  
