@@ -117,6 +117,11 @@ nav h1 a:hover::after {
   z-index: 0;
 }
 
+.hero-btn a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
 
 .hero-btn button {
   /* See */
@@ -133,7 +138,7 @@ nav h1 a:hover::after {
   cursor: pointer;
 }
 
-.hero-btn button a img {
+.hero-btn a button img {
   display: grid;
   width: 100px;
 }
