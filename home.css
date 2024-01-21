@@ -170,7 +170,6 @@ nav h1 a:hover::after {
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: px;
   background: rgb(27, 27, 27, 0.5);
   color: white;
   transition: 0.5s;
@@ -182,7 +181,6 @@ nav h1 a:hover::after {
 
 .card:hover .intro {
   height: 200px;
-  bottom: px;
   background: #001d3d;
   color: #ffc300;
 }
