@@ -73,6 +73,7 @@ header img {
     background-color: #003566;
     border-color: #003566;
     color: #ffc300;
+    transition: 0.4s;
 }
 
 /* Style the filters sidebar */
