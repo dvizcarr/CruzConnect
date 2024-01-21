@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lost & Found - CruzConnect</title>
-    <link rel="stylesheet" href="lostnfound.css">
+    <title>Recreation - CruzConnect</title>
+    <link rel="stylesheet" href="tutoring.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
@@ -15,7 +15,7 @@
 <body>
     <header>
         <a href="index.html"><img src="croppedcruzconnectlogo.png"></a>
-        <h1>Lost and Found</h1>
+        <h1>Tutoring</h1>
         <!-- The "Create Post" button triggers the openForm() function to display the New Post form -->
         <button class="open-button" onclick="openForm()">Create Post</button>
     </header>
@@ -23,26 +23,31 @@
     <aside id="filters">
         <h2>Filter</h2>
         <h3>Type:</h3>
-        <input type="checkbox" id="Looking for" name="Looking for"><label for="Looking for"> Looking for...</label>
+        <input type="checkbox" id="Tutor Request" name="Tutor Request"><label for="Tutor Request"> Tutor Request</label>
         <br>
-        <input type="checkbox" id="Found" name="Found"><label for="Found"> Found!</label>
-        <h3>Found around:</h3>
-        <ul>
-            <li><input type="radio" id="Cowell-Stevenson" name="location"><label
-                    for="Cowell-Stevenson">Cowell-Stevenson</label></li>
-            <li><input type="radio" id="Crown-Merrill" name="location"><label for="Crown-Merrill">Crown-Merrill</label>
-            </li>
-            <li><input type="radio" id="Oakes-RCC" name="location"><label for="Oakes-RCC">Oakes-RCC</label></li>
-            <li><input type="radio" id="Porter-Kresge" name="location"><label for="Porter-Kresge">Porter-Kresge</label>
-            </li>
-            <li><input type="radio" id="College 9-10" name="location"><label for="College 9-10">College 9-10</label>
-            </li>
-            <li><input type="radio" id="Other" name="location"><label for="Other">Other:</label></li>
-            <input type="text" placeholder="ex. McHenry Library" id="Other" name="Other"><label for="Other"></label>
-        </ul>
-        <h3>Found After:</h3>
+        <input type="checkbox" id="Tutoring Offer" name="Tutoring Offer"><label for="Tutoring Offer"> Tutoring
+            Offer</label>
+        <h3>Subject:</h3>
+        <input type="checkbox" id="CSE" name="CSE"><label for="CSE"> CSE</label>
+        <br>
+        <input type="checkbox" id="Physics" name="Physics"><label for="Physics"> Physics</label>
+        <br>
+        <input type="checkbox" id="Mathematics" name="Mathematics"><label for="Mathematics"> Mathematics</label>
+        <br>
+        <input type="checkbox" id="Biochemistry" name="Biochemistry"><label for="Biochemistry"> Biochemistry</label>
+        <br>
+        <input type="checkbox" id="History" name="History"><label for="History"> History</label>
+        <br>
+        <input type="checkbox" id="Psychology" name="Psychology"><label for="Psychology"> Psychology</label>
+        <h3>Available on:</h3>
         <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01">
         <br>
+        <h3>Price</h3>
+        <p> $<input type="number" placeholder="min" id="min-price" name="min-price" min="0" step="1"
+                class="price-filter">
+            <span>-</span>
+            <input type="number" placeholder="max" name="max-price" min="min-price" step="1" class="price-filter">
+        </p>
         <br>
     </aside>
 
@@ -73,13 +78,6 @@
         </article>
 
         <!-- Add more example posts below -->
-        <article class="post">
-            <div class="post-content">
-                <h3>Ride to Sacramento (West)</h3>
-                <p>Is anyone planning a trip to Sacramento next week? </p>
-            </div>
-            <button class="details-btn">View Details</button>
-        </article>
 
         <article class="post">
             <div class="post-content">
