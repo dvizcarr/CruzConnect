@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recreation - CruzConnect</title>
-    <link rel="stylesheet" href="tutoring.css">
+    <link rel="stylesheet" href="recreation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
@@ -15,64 +15,48 @@
 <body>
     <header>
         <a href="index.html"><img src="croppedcruzconnectlogo.png"></a>
-        <h1>Tutoring</h1>
+        <h1>Recreation</h1>
         <!-- The "Create Post" button triggers the openForm() function to display the New Post form -->
         <button class="open-button" onclick="openForm()">Create Post</button>
     </header>
 
     <aside id="filters">
         <h2>Filter</h2>
-        <h3>Type:</h3>
-        <input type="checkbox" id="Tutor Request" name="Tutor Request"><label for="Tutor Request"> Tutor Request</label>
+
+        <h3>Location:</h3>
+        <input type="checkbox" id="East Field House" name="Location"><label for="East Field House"> East Field
+            House</label>
         <br>
-        <input type="checkbox" id="Tutoring Offer" name="Tutoring Offer"><label for="Tutoring Offer"> Tutoring
-            Offer</label>
-        <h3>Subject:</h3>
-        <input type="checkbox" id="CSE" name="CSE"><label for="CSE"> CSE</label>
+        <input type="checkbox" id="West Field House" name="Location"><label for="West Field House"> West Field
+            House</label>
         <br>
-        <input type="checkbox" id="Physics" name="Physics"><label for="Physics"> Physics</label>
+        <input type="checkbox" id="East Field" name="Location"><label for="East Field"> East Field</label>
         <br>
-        <input type="checkbox" id="Mathematics" name="Mathematics"><label for="Mathematics"> Mathematics</label>
+        <input type="checkbox" id="Pogonip" name="Location"><label for="Pogonip"> Pogonip</label>
         <br>
-        <input type="checkbox" id="Biochemistry" name="Biochemistry"><label for="Biochemistry"> Biochemistry</label>
+        <input type="checkbox" id="East Gym" name="Location"><label for="East Gym"> East Gym</label>
         <br>
-        <input type="checkbox" id="History" name="History"><label for="History"> History</label>
-        <br>
-        <input type="checkbox" id="Psychology" name="Psychology"><label for="Psychology"> Psychology</label>
-        <h3>Available on:</h3>
+        <h3>Event day:</h3>
         <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01">
         <br>
-        <h3>Price</h3>
-        <p> $<input type="number" placeholder="min" id="min-price" name="min-price" min="0" step="1"
-                class="price-filter">
-            <span>-</span>
-            <input type="number" placeholder="max" name="max-price" min="min-price" step="1" class="price-filter">
-        </p>
-        <br>
+        <h3>People Needed:</h3>
+        <input type="number" min="1">
     </aside>
 
     <section id="post-grid">
         <!-- Dynamically insert posts here -->
         <article class="post">
             <div class="post-content">
-                <h3>Lyft to San Francisco (Central Sunset)</h3>
-                <p>Leaving UCSC on Friday (1/26) at 5 PM. Looking for two more passengers. $15 per person.</p>
+                <h3>Basketball @ East Field House</h3>
+                <p>Friends and I want to get a 5v5 going, need 2 more. East Field House basketball court on Friday
+                    (1/26) around 3 PM if interested.</p>
             </div>
             <button class="details-btn">View Details</button>
         </article>
-
         <article class="post">
             <div class="post-content">
-                <h3>Carpool to Los Angeles</h3>
-                <p>Heading to LA on Saturday morning (1/27) Room for two passengers. $20 per person.</p>
-            </div>
-            <button class="details-btn">View Details</button>
-        </article>
-
-        <article class="post">
-            <div class="post-content">
-                <h3>Uber to San Jose (Willow Glen)</h3>
-                <p>Traveling to San Jose on Sunday afternoon (1/28) Need two more passengers. $10 per person.</p>
+                <h3>Intramural Soccer Tryouts @ East Field</h3>
+                <p></p>
             </div>
             <button class="details-btn">View Details</button>
         </article>
