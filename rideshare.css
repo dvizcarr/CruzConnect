@@ -2,80 +2,100 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
-  /* Set a default font and line height */
-  body {
+    box-sizing: border-box; /* Makes sure padding doesn't affect total width */
+}
+
+/* Set a default font and line height */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
-  }
-  
-  /* Style the header section */
-  header {
+}
+
+/* Style the header section */
+header {
     background-color: #0077b6;
     color: #fff;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
-  }
-  
-  /* Style the navigation bar (if needed) */
-  /* You can add more styles for the navigation bar here */
-  
-  /* Style the Create a Rideshare Post section */
-  #create-post {
-    padding: 20px;
-  }
-  
-  #newPostForm {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  button[type="submit"] {
-    background-color: #0077b6;
-    color: #fff;
-    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for Create Post button */
+#create-post-btn {
+    background-color: #fff;
+    color: #0077b6;
+    border: 1px solid #fff;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 3px;
-  }
-  
-  /* Style the Available Rideshares section */
-  #posts-list {
-    padding: 20px;
-  }
-  
-  .post {
+}
+
+/* Style the filters sidebar */
+#filters {
     background-color: #f0f0f0;
     padding: 20px;
-    margin-bottom: 20px;
+    width: 200px;
+    float: left;
+}
+
+#filters ul {
+    list-style-type: none;
+}
+
+#filters ul li label {
+    margin-left: 5px;
+}
+
+/* Style the posts grid */
+#post-grid {
+    margin-left: 220px; /* Width of filters + some extra space */
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
     border-radius: 5px;
-  }
-  
-  .post h3 {
+}
+
+.post h3 {
     color: #0077b6;
     margin-bottom: 10px;
-  }
-  
-  .details-btn {
+}
+
+.details-btn {
     background-color: #0077b6;
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-  }
-  
-  /* Style the footer (if needed) */
-  /* You can add more styles for the footer here */
-  
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Clearfix for the float */
+footer::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #filters {
+        width: 100%;
+        float: none;
+    }
+
+    #post-grid {
+        margin-left: 0;
+    }
+}
