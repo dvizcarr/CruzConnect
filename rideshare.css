@@ -12,6 +12,14 @@ body {
     line-height: 1.5;
 }
 
+h3 {
+    color: #0077b6;
+}
+
+.price-filter {
+    width: 50px;
+}
+
 #overlay {
     display: none;
     /* Initially hidden */
@@ -33,9 +41,15 @@ header {
     padding: 10px 20px;
     text-align: center;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
+
+header img {
+    width: 90px;
+}
+
 
 /* Style for Create Post button */
 .open-button {

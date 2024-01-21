@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <a href="index.html"><img src="croppedcruzconnectlogo.png"></a>
         <h1>Rideshare Listings</h1>
         <!-- The "Create Post" button triggers the openForm() function to display the New Post form -->
         <button class="open-button" onclick="openForm()">Create Post</button>
@@ -28,10 +29,21 @@
             <li><input type="checkbox" id="ride-planning" name="ride-planning"><label for="ride-planning">Ride
                     Planning</label></li>
         </ul>
+        <br>
         <h3>By Date</h3>
+        <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01">
+        <br>
+        <br>
         <h3>Price</h3>
-        <p>$ min_box - max_box</p>
+        <p> $<input type="number" placeholder="min" id="min-price" name="min-price" min="0" step="1"
+                class="price-filter">
+            <span>-</span>
+            <input type="number" placeholder="max"="max-price" name="max-price" min="min-price" step="1"
+                class="price-filter">
+        </p>
+        <br>
         <h3>Seats Open</h3>
+        <input type="number" min="1">
     </aside>
 
     <section id="post-grid">
@@ -76,7 +88,7 @@
             <p>
                 <label for="date">When? </label>
                 <br>
-                <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01" />
+                <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01">
             </p>
             <p>
                 <label for="number">How many people do you need?</label>
