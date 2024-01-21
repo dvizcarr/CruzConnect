@@ -72,7 +72,7 @@ nav h1 a:hover::after {
 .nav-links ul li a {
   color: white;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .nav-links ul li::after {
