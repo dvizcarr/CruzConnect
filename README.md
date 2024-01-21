@@ -1,2 +1,1 @@
-# CruzConnect
-CruzHacks 2024
+readme
