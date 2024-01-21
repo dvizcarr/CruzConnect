@@ -154,8 +154,8 @@ nav h1 a:hover::after {
 }
 
 .card p {
-  font-size: 13px;
-  margin: 20px;
+  font-size: 14px;
+  margin: 5px;
   visibility: hidden;
   opacity: 0;
 }
