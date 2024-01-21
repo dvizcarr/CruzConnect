@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
+require('dotenv').config({path: 'pass.env'});
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 app.use(express.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://dvizcarr:0uwHfVhhfFgmRHzd@cruzhacks.dpkyaf6.mongodb.net/CruzConnect", {useNewUrlParser: true}, {useUnifiedTopology: true})
+mongoose.connect(process.env.DB_URI, {useNewUrlParser: true}, {useUnifiedTopology: true});
 
 const notesSchema = {
     title: String,
