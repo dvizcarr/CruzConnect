@@ -150,12 +150,11 @@ nav h1 a:hover::after {
 }
 
 .card h1 {
-  margin: 10px;
   font-size: 24px;
 }
 
 .card p {
-  font-size: 20;
+  font-size: 14px;
   margin: 20px;
   visibility: hidden;
   opacity: 0;
