@@ -46,33 +46,33 @@
     <button class="open-button" onclick="openForm()">New Post</button>
     <div id="popupContainer" class="popup-container">
         <span class="close-button" onclick="closeForm()">X</span>
-        <form action=" /submitted">
+        <form method ="post" action="/">
             <!-- Fields Needed: Title (required), Description (required, minimum 20 words), Date(required w/ date picker) -->
             <!-- People Needed/Space Available (maybe required for some not for others?)-->
             <!-- Price ($$$, not required)-->
             <p>
                 <label for="title">Listing Title: </label>
-                <input id="title" type="text" placeholder="title...">
+                <input id="title" type="text" placeholder="title..." name="title" >
             </p>
             <p>
             <fieldset>
                 <legend style="color:white">Description:</legend>
-                <textarea name="patientNotes" class="ta"></textarea>
+                <textarea class="ta" name="description"></textarea>
             </fieldset>
             </p>
             <p>
                 <label for="date">When? </label>
-                <input type="date" id="date" name="event-day" value="2024-01-19" min="2024-01-19" max="2031-01-01" />
+                <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01" />
             </p>
             <p>
                 <label for="number">How many people do you need?</label>
-                <input id="number" type="number" name="num" min="1" step="1">
+                <input id="number" type="number" name="people" min="1" step="1">
             </p>
             <p>
                 <label for="number">Asking Price: $ </label>
-                <input id="number" type="number" name="num" min="1" step="1">
+                <input id="number" type="number" name="price" min="1" step="1">
             </p>
-            <button>Create Post!</button>
+            <button type="submit"> Create Post!</button>
         </form>
     </div>
 </body>
