@@ -15,35 +15,35 @@
 <body>
     <header>
         <a href="index.html"><img src="croppedcruzconnectlogo.png"></a>
-        <h1>Rideshare Listings</h1>
+        <h1>Lost and Found</h1>
         <!-- The "Create Post" button triggers the openForm() function to display the New Post form -->
         <button class="open-button" onclick="openForm()">Create Post</button>
     </header>
 
     <aside id="filters">
         <h2>Filter</h2>
-        <h3>Ride Type</h3>
-        <ul>
-            <li><input type="checkbox" id="uber-lyft" name="uber-lyft"><label for="uber-lyft">Uber/Lyft</label></li>
-            <li><input type="checkbox" id="carpool" name="carpool"><label for="carpool">Carpool</label></li>
-            <li><input type="checkbox" id="ride-planning" name="ride-planning"><label for="ride-planning">Ride
-                    Planning</label></li>
-        </ul>
+        <h3>Type:</h3>
+        <input type="checkbox" id="Looking for" name="Looking for"><label for="Looking for"> Looking for...</label>
         <br>
-        <h3>By Date</h3>
+        <input type="checkbox" id="Found" name="Found"><label for="Found"> Found!</label>
+        <h3>Found around:</h3>
+        <ul>
+            <li><input type="radio" id="Cowell-Stevenson" name="location"><label
+                    for="Cowell-Stevenson">Cowell-Stevenson</label></li>
+            <li><input type="radio" id="Crown-Merrill" name="location"><label for="Crown-Merrill">Crown-Merrill</label>
+            </li>
+            <li><input type="radio" id="Oakes-RCC" name="location"><label for="Oakes-RCC">Oakes-RCC</label></li>
+            <li><input type="radio" id="Porter-Kresge" name="location"><label for="Porter-Kresge">Porter-Kresge</label>
+            </li>
+            <li><input type="radio" id="College 9-10" name="location"><label for="College 9-10">College 9-10</label>
+            </li>
+            <li><input type="radio" id="Other" name="location"><label for="Other">Other:</label></li>
+            <input type="text" placeholder="ex. McHenry Library" id="Other" name="Other"><label for="Other"></label>
+        </ul>
+        <h3>Found After:</h3>
         <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01">
         <br>
         <br>
-        <h3>Price</h3>
-        <p> $<input type="number" placeholder="min" id="min-price" name="min-price" min="0" step="1"
-                class="price-filter">
-            <span>-</span>
-            <input type="number" placeholder="max"="max-price" name="max-price" min="min-price" step="1"
-                class="price-filter">
-        </p>
-        <br>
-        <h3>Seats Open</h3>
-        <input type="number" min="1">
     </aside>
 
     <section id="post-grid">
