@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 app.use(express.urlencoded({extended: true}));
 
-mongoose.connect(process.env.DB_URI, {useNewUrlParser: true}, {useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://dvizcarr:TJVPg5dcfwJqhMYg@cruzhacks.dpkyaf6.mongodb.net/CruzConnect", {useNewUrlParser: true}, {useUnifiedTopology: true});
 
 const notesSchema = {
     title: String,
