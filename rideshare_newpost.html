@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="rideshare_newpost.css">
     <title>CruzConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
     <style>
         /* Style for the pop-up container */
         .popup-container {
-            display: block; /* Display the container by default */
+            display: block;
+            /* Display the container by default */
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #ffc300;
-            padding: 30px; /* Increase padding for a bigger container */
+            padding: 30px;
+            /* Increase padding for a bigger container */
             border: 1px solid #ccc;
             z-index: 1;
             color: #000814;
-            width: 70%; /* Adjust the width as desired */
-            max-width: 400px; /* Limit the maximum width to prevent it from getting too wide */
+            width: 70%;
+            /* Adjust the width as desired */
+            max-width: 400px;
+            /* Limit the maximum width to prevent it from getting too wide */
         }
 
         /* Style for the close button */
@@ -31,6 +40,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Remove the "New Post" button from here -->
     <div id="popupContainer" class="popup-container">
@@ -44,10 +54,10 @@
                 <input id="title" type="text" placeholder="title..." name="title">
             </p>
             <p>
-                <fieldset>
-                    <legend style="color:white">Description:</legend>
-                    <textarea class="ta" name="description"></textarea>
-                </fieldset>
+            <fieldset>
+                <legend style="color:white">Description:</legend>
+                <textarea class="ta" name="description"></textarea>
+            </fieldset>
             </p>
             <p>
                 <label for="date">When? </label>
@@ -65,4 +75,5 @@
         </form>
     </div>
 </body>
+
 </html>
