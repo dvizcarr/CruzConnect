@@ -9,7 +9,8 @@
 <body>
     <header>
         <h1>Rideshare Listings</h1>
-        <button id="create-post-btn" onclick="openNewPost()">Create Post</button>
+        <!-- The "Create Post" button triggers the openForm() function to display the New Post form -->
+        <button class="open-button" onclick="openForm()">Create Post</button>
     </header>
 
     <aside id="filters">
@@ -35,6 +36,24 @@
         <!-- Footer content -->
     </footer>
 
+    <!-- Include the New Post container here -->
+    <div id="popupContainer" class="popup-container">
+        <span class="close-button" onclick="closeForm()">X</span>
+        <!-- Include the content of rideshare_newpost.html here using JavaScript -->
+        <iframe src="rideshare_newpost.html" frameborder="0" scrolling="no"></iframe>
+    </div>
+
     <script src="rideshare.js"></script>
+    <script>
+        function openForm() {
+            var popupContainer = document.getElementById('popupContainer');
+            popupContainer.style.display = 'block';
+        }
+
+        function closeForm() {
+            var popupContainer = document.getElementById('popupContainer');
+            popupContainer.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
