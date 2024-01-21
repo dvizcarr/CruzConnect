@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 app.use(express.urlencoded({extended: true}));
 
-mongoose.connect(process.env.DB_URI, {useNewUrlParser: true}, {useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://dvizcarr:TJVPg5dcfwJqhMYg@cruzhacks.dpkyaf6.mongodb.net/CruzConnect", {useNewUrlParser: true}, {useUnifiedTopology: true});
 
 const notesSchema = {
     title: String,
@@ -19,7 +19,7 @@ const Note = mongoose.model('Note', notesSchema);
 
 
 app.get("/", function(req, res) {
-    res.sendFile(__dirname + '/new_post.html');
+    res.sendFile(__dirname + '/rideshare_newpost.html');
 })
 
 app.post("/", function(req, res){
