@@ -8,39 +8,33 @@
 </head>
 <body>
     <header>
-        <!-- Navigation Bar -->
+        <h1>Rideshare Listings</h1>
+        <button id="create-post-btn">Create Post</button>
     </header>
 
-    <main>
-        <section id="create-post">
-            <h2>Create a Rideshare Post</h2>
-            <form id="newPostForm">
-                <!-- Input fields for the post details -->
-                <input type="text" name="destination" placeholder="Destination" required>
-                <input type="text" name="departure" placeholder="Departure Time" required>
-                <textarea name="additionalInfo" placeholder="Additional Information"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+    <aside id="filters">
+        <h2>Filter</h2>
+        <ul>
+            <li><input type="checkbox" id="uber-lyft" name="uber-lyft"><label for="uber-lyft">Uber/Lyft</label></li>
+            <li><input type="checkbox" id="carpool" name="carpool"><label for="carpool">Carpool</label></li>
+            <li><input type="checkbox" id="ride-planning" name="ride-planning"><label for="ride-planning">Ride Planning</label></li>
+        </ul>
+    </aside>
 
-        <section id="posts-list">
-            <h2>Available Rideshares</h2>
-            <!-- This is where the posts will be injected -->
-            <article class="post">
-                <h3>Post Title (e.g., To San Francisco)</h3>
-                <p>Description or details about the rideshare.</p>
-                <button class="details-btn">View Details</button>
-            </article>
-            <!-- Repeat the above for each post -->
-        </section>
-    </main>
+    <section id="post-grid">
+        <!-- Dynamically insert posts here -->
+        <article class="post">
+            <h3>Ride to San Francisco</h3>
+            <p>Leaving UCSC on Friday at 5 PM. Looking for two more passengers. $15 per person.</p>
+            <button class="details-btn">View Details</button>
+        </article>
+        <!-- Repeat for other posts -->
+    </section>
 
     <footer>
         <!-- Footer content -->
     </footer>
 
-    <script>
-        // Here you will add JavaScript to handle form submission and post expansion.
-    </script>
+    <script src="rideshare.js"></script>
 </body>
 </html>
