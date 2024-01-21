@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rideshare - CruzConnect</title>
     <link rel="stylesheet" href="rideshare.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>Rideshare Listings</h1>
@@ -15,11 +21,17 @@
 
     <aside id="filters">
         <h2>Filter</h2>
+        <h3>Ride Type</h3>
         <ul>
             <li><input type="checkbox" id="uber-lyft" name="uber-lyft"><label for="uber-lyft">Uber/Lyft</label></li>
             <li><input type="checkbox" id="carpool" name="carpool"><label for="carpool">Carpool</label></li>
-            <li><input type="checkbox" id="ride-planning" name="ride-planning"><label for="ride-planning">Ride Planning</label></li>
+            <li><input type="checkbox" id="ride-planning" name="ride-planning"><label for="ride-planning">Ride
+                    Planning</label></li>
         </ul>
+        <h3>By Date</h3>
+        <h3>Price</h3>
+        <p>$ min_box - max_box</p>
+        <h3>Seats Open</h3>
     </aside>
 
     <section id="post-grid">
@@ -36,24 +48,71 @@
         <!-- Footer content -->
     </footer>
 
+    <div id="overlay"></div>
+
     <!-- Include the New Post container here -->
     <div id="popupContainer" class="popup-container">
         <span class="close-button" onclick="closeForm()">X</span>
+        <form method="post" action="/">
+            <!-- Fields Needed: Title (required), Description (required, minimum 20 words), Date(required w/ date picker) -->
+            <!-- People Needed/Space Available (maybe required for some not for others?)-->
+            <!-- Price ($$$, not required) -->
+            <p>
+                <label for="username">Display Name:</label>
+                <br>
+                <input type="username">
+            </p>
+            <p>
+                <label for="title">Listing Title: </label>
+                <br>
+                <input id="title" type="text" name="title">
+            </p>
+            <p>
+            <fieldset>
+                <legend style="color:black">Description:</legend>
+                <textarea class="ta" name="description"></textarea>
+            </fieldset>
+            </p>
+            <p>
+                <label for="date">When? </label>
+                <br>
+                <input type="date" id="date" name="date" value="2024-01-19" min="2024-01-19" max="2031-01-01" />
+            </p>
+            <p>
+                <label for="number">How many people do you need?</label>
+                <br>
+                <input id="number" type="number" name="people" min="1" step="1">
+            </p>
+            <p>
+                <label for="number">Asking Price: </label>
+                <br>
+                $<input id="number" type="number" name="price" min="1" step="1">
+            </p>
+            <br>
+            <button type="submit"> Create Post!</button>
+        </form>
+        <span class="close-button" onclick="closeForm()">X</span>
         <!-- Include the content of rideshare_newpost.html here using JavaScript -->
-        <iframe src="rideshare_newpost.html" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <script src="rideshare.js"></script>
     <script>
         function openForm() {
+            var overlay = document.getElementById('overlay');
             var popupContainer = document.getElementById('popupContainer');
+
+            overlay.style.display = 'block';
             popupContainer.style.display = 'block';
         }
 
         function closeForm() {
+            var overlay = document.getElementById('overlay');
             var popupContainer = document.getElementById('popupContainer');
+
+            overlay.style.display = 'none';
             popupContainer.style.display = 'none';
         }
     </script>
 </body>
+
 </html>

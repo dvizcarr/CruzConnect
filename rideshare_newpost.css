@@ -2,31 +2,39 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Makes sure padding doesn't affect total width */
+    box-sizing: border-box;
+    /* Makes sure padding doesn't affect total width */
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Ensure that body takes full height */
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent scrolling within the iframe */
+    overflow: hidden;
+    /* Prevent scrolling within the iframe */
 }
 
 /* Style for the pop-up container */
 .popup-container {
-    display: block; /* Display the container by default */
+    display: block;
+    /* Display the container by default */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffc300;
-    padding: 30px; /* Increase padding for a bigger container */
+    padding: 30px;
+    /* Increase padding for a bigger container */
     border: 1px solid #ccc;
     z-index: 1;
     color: #000814;
-    width: 70%; /* Adjust the width as desired */
-    max-width: 400px; /* Limit the maximum width to prevent it from getting too wide */
+    width: 70%;
+    /* Adjust the width as desired */
+    max-width: 400px;
+    /* Limit the maximum width to prevent it from getting too wide */
 }
 
 /* Style for the close button */
@@ -39,33 +47,50 @@ body, html {
 
 form {
     /* ... existing styles ... */
-    max-width: none; /* Allow form to expand fully within the iframe */
+    max-width: none;
+    /* Allow form to expand fully within the iframe */
 }
 
-label, .ta, input, button {
-    display: block; /* Make form elements block to occupy full width */
+label,
+.ta,
+input,
+button {
+    display: block;
+    /* Make form elements block to occupy full width */
     width: 100%;
-    margin-bottom: 10px; /* Space out elements */
+    margin-bottom: 10px;
+    /* Space out elements */
 }
 
-input[type="text"], input[type="date"], input[type="number"], .ta, button {
-    border: 1px solid #ccc; /* Consistent border */
-    padding: 8px; /* Padding for input */
-    border-radius: 4px; /* Rounded corners for input fields */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+.ta,
+button {
+    border: 1px solid #ccc;
+    /* Consistent border */
+    padding: 8px;
+    /* Padding for input */
+    border-radius: 4px;
+    /* Rounded corners for input fields */
 }
 
 button {
-    background-color: #0077b6; /* Button color */
+    background-color: #0077b6;
+    /* Button color */
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
-    font-weight: bold; /* Make the text bold */
-    border-radius: 4px; /* Rounded corners for button */
+    font-weight: bold;
+    /* Make the text bold */
+    border-radius: 4px;
+    /* Rounded corners for button */
 }
 
 button:hover {
-    background-color: #005f8a; /* Slightly darker on hover */
+    background-color: #005f8a;
+    /* Slightly darker on hover */
 }
 
 /* ... additional styles ... */
