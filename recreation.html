@@ -93,14 +93,14 @@
     <!-- Include the New Post container here -->
     <div id="popupContainer" class="popup-container">
         <span class="close-button" onclick="closeForm()">X</span>
-        <form method="post" action="/">
+        <form method="post" action="/submitted">
             <!-- Fields Needed: Title (required), Description (required, minimum 20 words), Date(required w/ date picker) -->
             <!-- People Needed/Space Available (maybe required for some not for others?)-->
             <!-- Price ($$$, not required) -->
             <p>
                 <label for="username">Display Name:</label>
                 <br>
-                <input type="username">
+                <input type="username" id="username">
             </p>
             <p>
                 <label for="title">Title: </label>
@@ -110,7 +110,7 @@
             <p>
             <fieldset>
                 <legend style="color:black">Description:</legend>
-                <textarea class="ta" name="description"></textarea>
+                <textarea class="ta" id="description" name="description"></textarea>
             </fieldset>
             </p>
             <p>
@@ -124,12 +124,12 @@
                 <input id="number" type="number" name="people" min="1" step="1">
             </p>
             <p>
-                <label for="number">Asking Price: </label>
+                <label for="price">Asking Price: </label>
                 <br>
-                $<input id="number" type="number" name="price" min="1" step="1">
+                $<input id="price" type="number" name="price" min="1" step="1">
             </p>
             <br>
-            <button type="submit"> Create Post!</button>
+            <button type="button" onclick="createPost()"> Create Post!</button>
         </form>
         <span class="close-button" onclick="closeForm()">X</span>
         <!-- Include the content of rideshare_newpost.html here using JavaScript -->
@@ -151,6 +151,32 @@
 
             overlay.style.display = 'none';
             popupContainer.style.display = 'none';
+        }
+        function createPost() {
+            // Get form values
+            var displayName = document.getElementById('username').value;
+            var title = document.getElementById('title').value;
+            var description = document.getElementById('description').value;
+            var date = document.getElementById('date').value;
+            var peopleNeeded = document.getElementById('number').value;
+            var price = document.getElementById('price').value;
+
+            // Create new post HTML
+            var newPostHTML = `
+        <article class="post">
+            <div class="post-content">
+                <h3>${title}</h3>
+                <p>${description}</p>
+            </div>
+            <button class="details-btn">View Details</button>
+        </article>
+    `;
+
+            // Insert new post as the first child of the post grid
+            document.getElementById('post-grid').insertAdjacentHTML('afterbegin', newPostHTML);
+
+            // Close the form
+            closeForm();
         }
     </script>
 </body>

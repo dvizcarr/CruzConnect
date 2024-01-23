@@ -159,6 +159,33 @@
             overlay.style.display = 'none';
             popupContainer.style.display = 'none';
         }
+        function createPost() {
+            // Get form values
+            var displayName = document.getElementById('username').value;
+            var title = document.getElementById('title').value;
+            var description = document.getElementById('description').value;
+            var date = document.getElementById('date').value;
+            var peopleNeeded = document.getElementById('number').value;
+            var price = document.getElementById('price').value;
+
+            // Create new post HTML
+            var newPostHTML = `
+                <article class="post">
+                    <div class="post-content">
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                    </div>
+                    <button class="details-btn">View Details</button>
+                </article>
+            `;
+
+            // Insert new post as the first child of the post grid
+            document.getElementById('post-grid').insertAdjacentHTML('afterbegin', newPostHTML);
+
+            // Close the form
+            closeForm();
+        }
+
     </script>
 </body>
 
